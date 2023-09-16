@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::placeholder{color: yellow;}
+        h2{color: blue; text-align: center;}
+        .mytextbox{
+            color: #99FF33; background-color: #006699;
+            border: 1px solid #996633; width: 300px;
+        }
+        .bong{box-shadow: 0 0 7px red;}
+        .mytextbox:hover{font-weight: bolder;}
+    </style>
+</head>
+<body>
+    <h2>HELLO</h2>
+    <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+    <form method="post" enctype="multipart/form-data" action="XuLyDangKy.php">
+        <table>
+            <tr>
+                <td>Họ tên</td>
+                <td>
+                    <input class="mytextbox bong" type="text" name="txtHoTen" required
+                        placeholder="Vui lòng nhập họ tên" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    <input class="mytextbox" name="txtUserName" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td>
+                    <input class="mytextbox" type="password" name="txtPass" required
+                    placeholder="Mật khẩu" />
+                </td>
+            </tr>
+            <tr>
+                <td>Gõ lại mật khẩu</td>
+                <td>
+                    <input class="mytextbox" type="password" name="txtRepass" required
+                    placeholder="Mật khẩu nhập lại" />
+                </td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td>
+                    <input type="radio" name="rdPhai" value="0" checked>Nam
+                    <input type="radio" name="rdPhai" value="1">Nữ
+                    <input type="radio" name="rdPhai" value="-1">Khác
+                </td>
+            </tr>
+            <tr>
+                <td>Ngoại ngữ</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select class="mytextbox" name="cboNgheNghiep">
+                        <option value="0">Bạn làm nghề gì</option>
+                        <option value="1">Học sinh - Sinh viên</option>
+                        <option value="2">Giáo viên</option>
+                        <option value="3">Bác sĩ</option>
+                        <option value="4">Kĩ sư</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <button>Gửi</button>
+                    <button type="reset">Xóa nhập lại</button>
+                    <button type="button">Gọi JS</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

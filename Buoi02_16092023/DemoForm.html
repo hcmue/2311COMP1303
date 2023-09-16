@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ĐĂNG KÝ</h2>
+    <form action="XuLyDangKy.php" method="get">
+        Tên: <input name="hoten" />
+        <br>
+        Mật khẩu:
+        <input type="password" name="matkhau" />
+        <br>
+        Tuổi: <input name="tuoi" 
+            type="number" min="10" max="60" />
+        <br>
+        Giới tính:
+        <input type="radio" name="gt" value="1">Nam
+        <input type="radio" name="gt" value="2" 
+            checked>Nữ
+        <br>
+        Quê quán:
+        <select name="quequan">
+            <option value="ct">Cần Thơ</option>
+            <option value="sg">Sài Gòn</option>
+            <option value="hn">Hà Nội</option>
+        </select>
+        <button>Gửi</button>
+    </form>
+</body>
+</html>
