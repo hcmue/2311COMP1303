@@ -12,14 +12,34 @@
             border: 1px dashed blue;
             padding: 10px;
             display: inline-block;
+            position: relative;
+        }
+
+        .moi {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50px;
+        }
+
+        .newicon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
         }
     </style>
 </head>
 
 <body>
-    <div class="mydiv">MYDIV1</div>
+    <div class="mydiv">MYDIV1
+        <img src="images/moi-icon.png" class="newicon" />
+    </div>
     <div class="mydiv">MYDIV2</div>
-    <div class="mydiv">MYDIV3</div>
+    <div class="mydiv">MYDIV3
+        <img src="images/moi-icon.png" class="newicon" />
+    </div>
+    <img src="images/moi-icon.png" class="moi" />
 </body>
 
 </html>
