@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm</title>
+</head>
+
+<body>
+    <form>
+        <h2>TÍNH ĐIỂM MÔN HỌC</h2>
+        <div> Bài tập (20%): <input name="diemBaiTap" id="diemBaiTap" type="number" min="0" max="10" step="0.1" />
+        </div>
+        <div> Thi thực hành (30%): <input name="diemThucHanh" id="diemThucHanh" type="number" min="0" max="10" />
+        </div>
+        <div> Đồ án (50%): <input name="diemDoAn" id="diemDoAn" type="number" min="0" max="10" />
+        </div>
+        <div>
+            <button type="button" onclick="xuLyTinhToan()"> Tính điểm và Xếp loại </button>
+        </div>
+        <div id="ketQua"></div>
+    </form>
+    <script>
+        function xuLyTinhToan() {
+            let diemQT = parseFloat(document.getElementById("diemBaiTap").value);
+            let diemTH = parseFloat(document.getElementById("diemThucHanh").value);
+            let diemDA = parseFloat(document.getElementById("diemDoAn").value);
+            let diemTongKet = (diemQT * 0.2 + diemTH * 0.3 + diemDA * 0.5).toFixed(1);
+            // alert(diemTongKet);
+            let xepLoai = "";
+            if (diemTongKet >= 8.5) {
+                xepLoai = "A";
+            } else if (diemTongKet >= 7.8) {
+                xepLoai = "B+";
+            } else if (diemTongKet >= 7) {
+                xepLoai = "B";
+            } else if (diemTongKet >= 6.3) {
+                xepLoai = "C+";
+            } else if (diemTongKet >= 5.5) {
+                xepLoai = "C";
+            }
+            document.getElementById("ketQua").innerHTML = "Điểm: " + diemTongKet + " : " + xepLoai;
+        }
+    </script>
+</body>
+
+</html>
