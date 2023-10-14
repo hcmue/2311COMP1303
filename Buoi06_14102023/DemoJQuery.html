@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>My div 1</div>
+    <div>My div 2</div>
+    <div>My div 3</div>
+    <div>My div 4</div>
+    <div>My div 5</div>
+    <div>My div 6</div>
+    <button class="mybtn" type="button">HELLO</button>
+    <button id="chenDuLieu" type="button">Chèn</button>
+    <div id="result"></div>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#chenDuLieu").click(function(){
+                $("#result").html("<h3>Hát Ba</h3>");
+            });
+
+            //gắn sự kiện click thẻ div thì cho thẻ đó biến mất
+            $("div").click(function(){
+                $(this).hide(1500);
+            });
+
+            //gắn sự kiện click lên button
+            $(".mybtn").click(function(){
+                alert("HELLLO");
+            });
+        });
+    </script>
+</body>
+</html>
