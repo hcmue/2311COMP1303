@@ -9,7 +9,8 @@
     <script>
         $(document).ready(function(){
             $("td").css({
-                'border': '1px dotted blue', 'width': '75px', 'height': '75px'
+                'border': '1px dotted blue', 'width': '75px',
+                'height': '75px', 'text-align': 'center'
             });
             $("#btnHide").click(function(){
                 $("#tblBanCo").hide(1000);
@@ -19,6 +20,14 @@
             });
             $("#btnToggle").click(function () {
                 $("#tblBanCo").toggle(1000);
+            });
+
+            let gt = "X";
+            $("td").click(function(){
+                if($(this).html() != "X" && $(this).html() != "O") {
+                    $(this).html(gt);
+                    gt = gt == "X" ? "O" : "X";
+                }
             });
         });        
     </script>
