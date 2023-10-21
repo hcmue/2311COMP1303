@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#form1").validate({
+                rules:{
+                    txtName:{required: true, minlength: 5},
+                    txtAge:{ required: true, range: [18, 60]}
+                },
+                messages:{
+                    txtName: { required: "Phải nhập", minlength: "Tối thiểu 5 kí tự" }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div>
+            Name: <input name="txtName" />
+        </div>
+        <div>
+            Age: <input name="txtAge" />
+        </div>
+        <button>Gửi</button>
+    </form>
+</body>
+</html>

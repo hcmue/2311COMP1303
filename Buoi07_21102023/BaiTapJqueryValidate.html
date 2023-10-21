@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="myform" action="DangKy" class="container">
+        <h2 class="text-center text-danger">
+            Đăng ký Thành viên
+        </h2>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Mã sinh viên</div>
+            <div class="col-8 col-md-9">
+                <input name="MaSV" placeholder="Mã sinh viên" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Họ tên</div>
+            <div class="col-8 col-md-9">
+                <input name="HoTen" placeholder="Họ tên Sinh viên" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Ngày sinh</div>
+            <div class="col-8 col-md-9">
+                <input name="NgaySinh" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Email</div>
+            <div class="col-8 col-md-9">
+                <input name="Email" placeholder="Email" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Xác nhận email</div>
+            <div class="col-8 col-md-9">
+                <input name="XacNhanEmail" placeholder="Xác nhận email" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Số tài khoản</div>
+            <div class="col-8 col-md-9">
+                <input name="SoTaiKhoan" placeholder="Số tài khoản" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Hình</div>
+            <div class="col-8 col-md-9">
+                <input type="file" name="Hinh" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Điểm</div>
+            <div class="col-8 col-md-9">
+                <input name="Diem" placeholder="Điểm" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Hệ số</div>
+            <div class="col-8 col-md-9">
+                <input name="HeSo" placeholder="Hệ số" class="w-100" />
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right">Thông tin thêm</div>
+            <div class="col-8 col-md-9">
+                <textarea name="ThongTinThem" class="w-100"></textarea>
+            </div>
+        </div>
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right"></div>
+            <div class="col-8 col-md-9">
+                <button class="btn btn-success">Đăng ký</button>
+                <button class="btn btn-danger" type="reset">Nhập lại</button>
+            </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#form1").validate({
+                rules: {
+                },
+                messages: {
+                }
+            });
+        });
+    </script>
+</body>
+</html>
